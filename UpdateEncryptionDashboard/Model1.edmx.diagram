@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a9f4910df284ee3b1ea2ff27dd7241d" Name="Diagram1">
+        <EntityTypeShape EntityType="AdventureParkModel.DatabaseEncryptionLogTest" Width="1.5" PointX="3.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureParkModel.statusSQLTest" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureParkModel.DatabaseEncryptionLog" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AdventureParkModel.statusSQL" Width="1.5" PointX="0.75" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

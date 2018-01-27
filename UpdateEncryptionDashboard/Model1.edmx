@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AdventureParkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="DatabaseEncryptionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EncryptionStatus" Type="varchar" MaxLength="100" />
+          <Property Name="Application" Type="varchar" MaxLength="100" />
+          <Property Name="LastUpdate" Type="varchar" MaxLength="20" />
+          <Property Name="Tally" Type="int" />
+        </EntityType>
+        <EntityType Name="DatabaseEncryptionLogTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EncryptionStatus" Type="varchar" MaxLength="100" />
+          <Property Name="Application" Type="varchar" MaxLength="100" />
+          <Property Name="LastUpdate" Type="varchar" MaxLength="20" />
+          <Property Name="Tally" Type="int" />
+        </EntityType>
+        <EntityType Name="statusSQL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NodeName" Type="varchar" MaxLength="50" />
+          <Property Name="Instance" Type="varchar" MaxLength="100" />
+          <Property Name="DBname" Type="varchar" MaxLength="200" />
+          <Property Name="LogicalFileName" Type="varchar" MaxLength="200" />
+          <Property Name="PathFromSQL" Type="varchar" MaxLength="200" />
+          <Property Name="FileType" Type="varchar" MaxLength="5" />
+          <Property Name="NodeNameVormetric" Type="varchar" MaxLength="50" />
+          <Property Name="GuardPointPath" Type="varchar" MaxLength="200" />
+          <Property Name="EncryptionStatus" Type="varchar" MaxLength="100" />
+          <Property Name="Application" Type="varchar" MaxLength="100" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Environment" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdate" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="statusSQLTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NodeName" Type="varchar" MaxLength="50" />
+          <Property Name="Instance" Type="varchar" MaxLength="100" />
+          <Property Name="DBname" Type="varchar" MaxLength="200" />
+          <Property Name="LogicalFileName" Type="varchar" MaxLength="200" />
+          <Property Name="PathFromSQL" Type="varchar" MaxLength="200" />
+          <Property Name="FileType" Type="varchar" MaxLength="5" />
+          <Property Name="NodeNameVormetric" Type="varchar" MaxLength="50" />
+          <Property Name="GuardPointPath" Type="varchar" MaxLength="200" />
+          <Property Name="EncryptionStatus" Type="varchar" MaxLength="100" />
+          <Property Name="Application" Type="varchar" MaxLength="100" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Environment" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdate" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="AdventureParkModelStoreContainer">
+          <EntitySet Name="DatabaseEncryptionLog" EntityType="Self.DatabaseEncryptionLog" Schema="db_owner" store:Type="Tables" />
+          <EntitySet Name="DatabaseEncryptionLogTest" EntityType="Self.DatabaseEncryptionLogTest" Schema="db_owner" store:Type="Tables" />
+          <EntitySet Name="statusSQL" EntityType="Self.statusSQL" Schema="db_owner" store:Type="Tables" />
+          <EntitySet Name="statusSQLTest" EntityType="Self.statusSQLTest" Schema="db_owner" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureParkModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="DatabaseEncryptionLogTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EncryptionStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Application" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tally" Type="Int32" />
+        </EntityType>
+        <EntityType Name="statusSQLTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Instance" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DBname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LogicalFileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PathFromSQL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FileType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NodeNameVormetric" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GuardPointPath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EncryptionStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Application" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DataEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DatabaseEncryptionLogTests" EntityType="Self.DatabaseEncryptionLogTest" />
+          <EntitySet Name="statusSQLTests" EntityType="Self.statusSQLTest" />
+          <EntitySet Name="DatabaseEncryptionLogs" EntityType="AdventureParkModel.DatabaseEncryptionLog" />
+          <EntitySet Name="statusSQLs" EntityType="AdventureParkModel.statusSQL" />
+        </EntityContainer>
+        <EntityType Name="DatabaseEncryptionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EncryptionStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Application" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tally" Type="Int32" />
+        </EntityType>
+        <EntityType Name="statusSQL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Instance" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DBname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LogicalFileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PathFromSQL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FileType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NodeNameVormetric" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GuardPointPath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EncryptionStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Application" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureParkModelStoreContainer" CdmEntityContainer="DataEntities1">
+          <EntitySetMapping Name="DatabaseEncryptionLogTests">
+            <EntityTypeMapping TypeName="AdventureParkModel.DatabaseEncryptionLogTest">
+              <MappingFragment StoreEntitySet="DatabaseEncryptionLogTest">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EncryptionStatus" ColumnName="EncryptionStatus" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Tally" ColumnName="Tally" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="statusSQLTests">
+            <EntityTypeMapping TypeName="AdventureParkModel.statusSQLTest">
+              <MappingFragment StoreEntitySet="statusSQLTest">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+                <ScalarProperty Name="Instance" ColumnName="Instance" />
+                <ScalarProperty Name="DBname" ColumnName="DBname" />
+                <ScalarProperty Name="LogicalFileName" ColumnName="LogicalFileName" />
+                <ScalarProperty Name="PathFromSQL" ColumnName="PathFromSQL" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="NodeNameVormetric" ColumnName="NodeNameVormetric" />
+                <ScalarProperty Name="GuardPointPath" ColumnName="GuardPointPath" />
+                <ScalarProperty Name="EncryptionStatus" ColumnName="EncryptionStatus" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DatabaseEncryptionLogs">
+            <EntityTypeMapping TypeName="AdventureParkModel.DatabaseEncryptionLog">
+              <MappingFragment StoreEntitySet="DatabaseEncryptionLog">
+                <ScalarProperty Name="Tally" ColumnName="Tally" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="EncryptionStatus" ColumnName="EncryptionStatus" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="statusSQLs">
+            <EntityTypeMapping TypeName="AdventureParkModel.statusSQL">
+              <MappingFragment StoreEntitySet="statusSQL">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="EncryptionStatus" ColumnName="EncryptionStatus" />
+                <ScalarProperty Name="GuardPointPath" ColumnName="GuardPointPath" />
+                <ScalarProperty Name="NodeNameVormetric" ColumnName="NodeNameVormetric" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="PathFromSQL" ColumnName="PathFromSQL" />
+                <ScalarProperty Name="LogicalFileName" ColumnName="LogicalFileName" />
+                <ScalarProperty Name="DBname" ColumnName="DBname" />
+                <ScalarProperty Name="Instance" ColumnName="Instance" />
+                <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
